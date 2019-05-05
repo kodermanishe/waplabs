@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Servlet quiz</title>
+    <link rel="stylesheet" href="qq.css" type="text/css">
+</head>
+<body>
+<a href="http://mumstudents.org/~987066/">home</a>
+<h1>Servlet quis 5/3/2019</h1>
+<ol>
+    <li>
+        What is the difference between a web server and a web container?
+        <p>Web server is a unit that manage web container and another components in this server, servlets, php.</p>
+    </li>
+    <li>
+        What is a servlet?
+        <p>Servlet is a component that processing requests from clients through web container.</p>
+    </li>
+    <li>
+        How do web servers and web containers interact with servlets?
+        <p>Web server get requests then use web container for finding and call servlets that processing the request.</p>
+    </li>
+    <li>
+        Who creates request objects?
+        <p>Client applications, http page for example.</p>
+    </li>
+    <li>
+        What are the states in the servlet lifecycle?
+        <p>Loading class, create instance, init, implementation of methods, destroy instance.</p>
+    </li>
+    <li>
+        Who calls init and when?
+        <p>Container call init after creation of certain servlet.</p>
+    </li>
+    <li>
+        Which of init, service, and doGet should you override?
+        <p>We should override doGet and doPost if we need to process request.</p>
+    </li>
+    <li>
+        In what sense are servlets multi-threaded?
+        <p>Web container create different threads from different application that send requests.</p>
+    </li>
+    <li>
+        What are the implications of this for servlet instance variables?
+        <p>Servlet not thread safe it means that different threads can change this variable or override different data in the same places of memory in the instance of servlet.</p>
+    </li>
+</ol>
+
+</body>
+</html>
+
+
