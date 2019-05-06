@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Servlet quiz</title>
+    <link rel="stylesheet" href="qq.css" type="text/css">
+</head>
+<body>
+<a href="http://mumstudents.org/~987066/">home</a>
+<h1>State Management quiz 5/5/2019</h1>
+<ol>
+    <li>Can post requests be bookmarked? What are the problems?
+        <p>We cannot bookmark POST request. If POST is bookmarked that means that parameters exist only on the URL and
+            all form parameter is lost at that time. And web server doesn’t know what to do with the request because
+            form parameters was lost but this parameter was expected.</p>
+    </li>
+    <li>What is the purpose of request dispatching?
+        <p>Purpose of request dispatching is to forward request to another servlet and ask it to handle problem itself.
+            Or include the request to another servlet or JSP and then finish operation in the same servlet.</p>
+    </li>
+    <li>What is the difference between redirect and request dispatch?
+        <p>If used redirect so web server sends back to client another WAP page and client use it to sent another
+            request. If used request dispatch so the request handle in the server and then result send back to
+            client.</p>
+    </li>
+    <li>What is an attribute?
+        <p>It is a pair with name and key, where name is String and value is Object. Used in ServletContext,
+            HttpServletRequest and HttpSession.</p>
+    </li>
+    <li>What is the difference between attributes and parameters?
+        <p>Parameter only used for reading information, but attributes is can be used for reading and write information.
+            Parameter has only String type, attributes is object type.</p>
+    </li>
+    <li>What are dangers of using attributes?
+        <p>Is accessed in all servlets and requests in the application. And thread safe only in request attributes.</p>
+    </li>
+    <li>What does it mean to say that http is stateless? Give an example of a stateful protocol.
+        <p>HTTP is stateless protocol it means that the every request doesn't keep any information about user or
+            previous operations and states of this operations. But sometimes it needs to pass information of states
+            between requests or user pages. For this case could be used cookies objects, that keeps in client side or
+            sessions that used cookies to keep session ID. It possible to use hidden fields in HTTP forms.</p>
+    </li>
+    <li>Give 5 different methods for maintaining state information (count each attribute scope as one method). Container
+        managed state (3 scopes)
+        <p>1. Request scope is exist in servlet method that process this request and destroyed when servlet finished
+            process this request.</p>
+        <p>2. Session scope exist only while the browser is opened.</p>
+        <p>3. When wab container closed the application scope is destroyed too.</p>
+        <p>4. Cookies saved in client machine, deleted when browser closed.</p>
+        <p>5. Fields on HTTP forms which hidden from user.</p>
+    </li>
+    <li>How long does a session last?
+        <p>Is it possible to change the duration of session existence time.</p>
+    </li>
+    <li>What is a cookie, and how long does a cookie last?
+        <p>Cookies are files in the client computers. Cookies use to keep useful information in files that used by
+            server. Temporary cookies deleted when user browser was closed. But permanent cookies have different time of
+            existence and depends on of parameter of this cookie. Cookies could be kept for 12 months or longer.</p>
+    </li>
+    <li>What is the purpose of URL rewriting?
+        <p>URL rewriting using to make URL more readable and make the meaning of this URL string according the stricture
+            and information of the pages.</p>
+    </li>
+    <li>Why does the request attribute report ‘null’ for the maintaining state demo?
+        <p>If retuned result null so it is means that attribute by the given name is not exist. If is called method
+            removeAttribute() for attribute it would have the same effect if is retuned null value of this
+            attribute.</p>
+    </li>
+</ol>
+</body>
+</html>
+
+
+
