@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Servlet quiz</title>
+    <link rel="stylesheet" href="qq.css" type="text/css">
+</head>
+<body>
+<a href="http://mumstudents.org/~987066/">home</a>
+<h1>JSP Introduction Quiz 5/6/2019</h1>
+<ol>
+    <li>What is the main value of Java Server Pages?
+        <p>The main differents JSP of HTML that JSP is dynamic pages where possible to write java code or add dynamic
+            changing fields.</p>
+    </li>
+    <li>How are JSP pages related to servlets?
+        <p>Servlet has so parameter as HttpServletRequest where we cn add attributes and change through attributes
+            dynamically fields in JSP page.</p>
+    </li>
+    <li>How are JSP pages related to HTML?
+        <p>HTML is a part of JSP, the stracture and tags is from HTML and the stracture of page forming by using HTML
+            tags.</p>
+    </li>
+    <li>Give an example of a JSP scriptlet and show how it will look in the JSP servlet.
+        <p>We can write java cod into this tags <% and %> . The use of scriрlets in JSP is for Java stаtements: <% java
+            statеments %> e.g. <% count+i; %></p>
+    </li>
+    <li>Give an example of a JSP declaration and show how it will look in the JSP servlet.
+        <p>We can declare the instance variable and/or methods inside JSP. The use of declaration in JSP <%! java
+            declaration statements %> e.g. <%! Moth.pow(2.0, 4); %></p>
+    </li>
+    <li>Give an example of a JSP comment and show how it will look in the JSP servlet.
+        <p>The example of comments in JSP looks like: <%-- comment --%></p>
+    </li>
+    <li>Give an example of a JSP expression and show how it will look in the JSP servlet.
+        <p>We can use JSP expression if want to insert Java expression inside JSP. The way of using expression is: <%=
+            expression %> e.g. <%= (c*2)-z %> is equivalent to out.println((c*2)-z);</p>
+    </li>
+    <li>Give an example of a JSP directive and show how it will look in the JSP servlet.
+        <p>We can control the processing of an entire JSP page using JSP directives. It gives directions to the server
+            regarding processing of a page. Example of use is: <%@ .... %></p>
+    </li>
+    <li>Explain how an EL expression is evaluated.
+        <p>An EL expression is a compact expression of systematic evaluation of the page, request, session and
+            application scopes. EL is "null friendly", it means that Also if EL not found the attribute it does not
+            return exception but only null.</p>
+    </li>
+    <li>Explain how servlet attributes are involved in EL expressions.
+        <p>The servlet attribute are used in EL expression how can we see it in the example: EL uses by default
+            PageContext.findAttribute() which scans the page, request, session and application scopes for the first next
+            non-null attribute value by attribute name as parameter. I want to mantion different scopes as ${pageScode},
+            ${requestScope}, ${sessionScope} or ${applicationScope}.</p>
+    </li>
+    <li>Explain how servlets and JSPs use request dispatch to interact.
+        <p>When this statement is appearing in web browser the page buffer is output to the browser and servlet is
+            executed. When servlet finished its execution and the handle pass to web page again and this page continue
+            its execution.</p>
+    </li>
+</ol>
+
+</body>
+</html>
+
+
