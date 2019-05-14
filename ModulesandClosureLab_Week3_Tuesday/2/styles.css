@@ -1,0 +1,24 @@
+div.lab{
+     float: left;
+     width: 120px;
+ }
+div.rh{
+    margin-bottom: 10px;
+}
+div{
+    margin-bottom: 10px;
+}
+label{
+    padding-bottom: 20px;
+}
+body{
+    margin-left: 30%;
+}
+legend{
+    font-weight: bold;
+    color: green;
+}
+fieldset{
+    width: 50%;
+}
+
