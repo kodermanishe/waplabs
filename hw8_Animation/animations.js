@@ -16,7 +16,7 @@ function initP() {
 var fr = 0;
 var animation = ANIMATIONS["blank"];
 var interval = null;
-var timer;
+var timer = 250;
 
 function doAnimation(){
     document.getElementById("text").value = animation[fr];
@@ -29,12 +29,10 @@ function stopAnimation() {
     clearInterval(interval);
     interval = null;
     setDisability(false);
-    document.getElementById("").value = animation[fr];
+    document.getElementById("text").value = animation[fr];
 }
 function startAnimation() {
     setDisability(true);
-    if (timer == null)
-        timer = 250;
     interval = setInterval(doAnimation, timer);
 }
 function setDisability(p) {
