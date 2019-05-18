@@ -24,6 +24,7 @@ game = function () {
             div.style.top = y + 'px';
             div.style.backgroundImage = 'url("background.jpg")';
             div.style.backgroundPosition = -x + 'px ' + (-y) + 'px';
+            updatePieces();
         }
     }
 
@@ -52,18 +53,9 @@ game = function () {
                 div2.style.left = tempX;
                 div2.style.top = tempY;
             }
+            updatePieces();
         }
     }
-
-    $("div div").mouseover(function () {
-        $(this).css("border-color", "red");
-        $(this).css("color", "red");
-    })
-
-    $("div div").mouseout(function () {
-        $(this).css("border-color", "black");
-        $(this).css("color", "black");
-    })
 
     $("div div").click(function () {
         var divEl = $(this);
@@ -77,7 +69,31 @@ game = function () {
             makeAMove(divEl, 100, 0);
         else if (((y + 100) == d) && x == r)
             makeAMove(divEl, 0, 100);
+        updatePieces();
     });
+
+    function updatePieces() {
+        $("div div").each(function () {
+            var x = parseInt($(this).css("left"));
+            var y = parseInt($(this).css("top"));
+            $(this).removeClass("movablepiece");
+            if (isMoveable(x, y))
+                $(this).addClass("movablepiece");
+        });
+    }
+
+    function isMoveable(x, y){
+        var res = false;
+        if (((x - 100) == r) && y == d)
+            res = true;
+        else if (((y - 100) == d) && x == r)
+            res = true;
+        else if (((x + 100) == r) && y == d)
+            res = true;
+        else if (((y + 100) == d) && x == r)
+            res = true;
+        return res;
+    }
 
     function makeAMove(element, xPos, yPos) {
         var x = parseInt(element.css("left")) + xPos + "px";
